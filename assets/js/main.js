@@ -39,6 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!isOpen) { body.classList.add('open'); item.classList.add('active'); }
     });
   });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      localStorage.setItem('scrollPos', window.scrollY);
+    });
+  });
   const hamburger = document.getElementById('nav-hamburger');
   const navMobile = document.getElementById('nav-mobile');
   if (hamburger && navMobile) {
