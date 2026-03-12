@@ -1,375 +1,490 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wilson Klein Cecchi — Developer &amp; Sysadmin</title>
-  <meta name="description" content="Portfolio of Wilson Klein Cecchi — Developer &amp; Sysadmin · TADS 2026">
-  <meta name="author" content="Wilson Klein Cecchi">
-  <meta name="robots" content="index, follow">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wkcdev.dev/en">
-  <meta property="og:title" content="Wilson Klein Cecchi — Developer &amp; Sysadmin">
-  <meta property="og:description" content="Portfolio of Wilson Klein Cecchi — Developer &amp; Sysadmin · TADS 2026">
-  <meta property="og:locale" content="en_US">
-  <link rel="canonical" href="https://wkcdev.dev/en">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon-180.png">
-</head>
-<body>
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursor-ring"></div>
-<nav>
-  <a href="#hero" class="nav-logo">W<span>.</span>K<span>.</span>C</a>
-  <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-  </div>
-  <div class="lang-switcher">
-    <a href="../" class="lang-btn " data-lang="pt">PT</a>
-    <span class="lang-sep">·</span>
-    <a href="./" class="lang-btn active" data-lang="en">EN</a>
-  </div>
-  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="nav-mobile" id="nav-mobile">
-      <a href="#about" class="nav-mobile-link">About</a>
-      <a href="#skills" class="nav-mobile-link">Skills</a>
-      <a href="#services" class="nav-mobile-link">Services</a>
-      <a href="#projects" class="nav-mobile-link">Projects</a>
-      <a href="#contact" class="nav-mobile-link">Contact</a>
-    <div class="lang-switcher lang-switcher-mobile">
-      <a href="../" class="lang-btn " data-lang="pt">PT</a>
-      <span class="lang-sep">·</span>
-      <a href="./" class="lang-btn active" data-lang="en">EN</a>
-    </div>
-  </div>
-</nav>
-<section id="hero">
-  <div class="hero-bg-text" aria-hidden="true">WILSON</div>
-  <p class="hero-tag">Developer &amp; Sysadmin · TADS 2026</p>
-  <h1 class="hero-name">
-    Wilson<br>
-    <span class="accent">Klein</span><br>
-    Cecchi
-  </h1>
-  <p class="hero-sub">Systems Analysis and Development student. Passionate about C programming, Linux systems and infrastructure. Building solid solutions, one line of code at a time.</p>
-  <div class="hero-cta-row">
-    <a href="#projects" class="btn-primary">Learn more →</a>
-    <span class="hero-scroll">Scroll to explore</span>
-  </div>
-  <div class="hero-year">© 2026</div>
-</section>
-<div class="gradient-bar"></div>
-<section id="about">
-  <p class="section-label">00 — About</p>
-  <div class="about-grid reveal">
-    <div class="about-photo-wrap">
-      <div class="about-photo"><img src="../assets/img/eutalvez.png" alt="Foto de Wilson Klein Cecchi"></div>
-      <div class="about-photo-tag">ADS · 2026</div>
-    </div>
-    <div class="about-text">
-      <h2 class="section-title">Who<br>I am?</h2>
-      <p>I am <strong>Wilson Klein Cecchi</strong>, a Systems Analysis and Development student with a strong interest in technology, programming and systems engineering. From an early age I have shown curiosity for understanding how things work, especially in computing, networking and software development.</p>
-      <p>My main focus is to evolve technically and build a solid career in technology. I have hands-on experience developing personal projects, such as games in C and experiments with systems, servers and Linux environments.</p>
-      <p>What motivates me most is the <strong>challenge of solving complex problems</strong> and constantly improving my skills. I always seek to deepen my knowledge, test new tools and explore different areas of technology.</p>
-      <div class="about-stats">
-      <div class="stat">
-        <div class="stat-number">C</div>
-        <div class="stat-label">Main Language</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wilson Klein Cecchi — Developer &amp; Sysadmin</title>
+    <meta
+      name="description"
+      content="Portfolio of Wilson Klein Cecchi — Developer &amp; Sysadmin · TADS 2026"
+    />
+    <meta name="author" content="Wilson Klein Cecchi" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wkcdev.dev/en" />
+    <meta
+      property="og:title"
+      content="Wilson Klein Cecchi — Developer &amp; Sysadmin"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Wilson Klein Cecchi — Developer &amp; Sysadmin · TADS 2026"
+    />
+    <meta property="og:locale" content="en_US" />
+    <link rel="canonical" href="https://wkcdev.dev/en" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/img/favicon-32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/img/favicon-180.png"
+    />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+    <nav>
+      <a href="#hero" class="nav-logo">W<span>.</span>K<span>.</span>C</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="stat">
-        <div class="stat-number">Linux</div>
-        <div class="stat-label">Work Environment</div>
+      <div class="lang-switcher">
+        <a href="../" class="lang-btn" data-lang="pt">PT</a>
+        <span class="lang-sep">·</span>
+        <a href="./" class="lang-btn active" data-lang="en">EN</a>
       </div>
-      <div class="stat">
-        <div class="stat-number">2026</div>
-        <div class="stat-label">ADS Graduation</div>
-      </div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="gradient-bar"></div>
-<section id="skills">
-  <p class="section-label reveal">01 — Skills</p>
-  <h2 class="section-title reveal">Stack &amp;<br>Tools</h2>
-  <div class="skills-grid">
-    <div class="skill-category reveal reveal-delay-1">
-      <p class="skill-cat-label">Languages</p>
-      <h3 class="skill-cat-title">Programming</h3>
-      <div class="skill-tags">
-          <span class="skill-tag">C</span>
-          <span class="skill-tag">Logic</span>
-          <span class="skill-tag">Pseudocode</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">AngularJS</span>
-          <span class="skill-tag">ANSI / Terminal</span>
-      </div>
-    </div>
-    <div class="skill-category reveal reveal-delay-2">
-      <p class="skill-cat-label">Tools</p>
-      <h3 class="skill-cat-title">Dev &amp; Design</h3>
-      <div class="skill-tags">
-          <span class="skill-tag">VS Code</span>
-          <span class="skill-tag">Windsurf</span>
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">OnlineGDB</span>
-          <span class="skill-tag">Uizard</span>
-          <span class="skill-tag">XAMPP</span>
-      </div>
-    </div>
-    <div class="skill-category reveal reveal-delay-1">
-      <p class="skill-cat-label">Systems</p>
-      <h3 class="skill-cat-title">Linux &amp; Infra</h3>
-      <div class="skill-tags">
-          <span class="skill-tag">Advanced Linux</span>
-          <span class="skill-tag">ZimaOS</span>
-          <span class="skill-tag">Ubuntu</span>
-          <span class="skill-tag">Servers</span>
-          <span class="skill-tag">Samba</span>
-          <span class="skill-tag">Drivers</span>
-          <span class="skill-tag">Docker</span>
-      </div>
-    </div>
-    <div class="skill-category reveal reveal-delay-2">
-      <p class="skill-cat-label">Knowledge</p>
-      <h3 class="skill-cat-title">Fundamentals</h3>
-      <div class="skill-tags">
-          <span class="skill-tag">Requirements Engineering</span>
-          <span class="skill-tag">Networking</span>
-          <span class="skill-tag">Protocols</span>
-          <span class="skill-tag">Tailscale / VPN</span>
-          <span class="skill-tag">Security</span>
-          <span class="skill-tag">SSH</span>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="gradient-bar"></div>
-<section id="services">
-  <p class="section-label reveal">02 — Services</p>
-  <h2 class="section-title reveal">What<br>I offer</h2>
-  <div class="services-list reveal">
-    <div class="service-item" data-accordion>
-      <span class="service-num">01</span>
-      <span class="service-name">Software Development</span>
-      <p class="service-desc">C programming focused on terminal applications, game logic, scoring systems, file manipulation and interactive menus.</p>
-      <span class="service-arrow">→</span>
-    </div>
-    <div class="service-details" data-accordion-body>
-      <ul>
-              <li>Main language: C (C99/C11)</li>
-              <li>Data structures: arrays, structs, pointers</li>
-              <li>File handling: read/write with FILE*</li>
-              <li>Terminal interface: ANSI escape codes, interactive menus</li>
-              <li>Game logic: movement, collision, ranking, timer</li>
-      </ul>
-    </div>
-    <div class="service-item" data-accordion>
-      <span class="service-num">02</span>
-      <span class="service-name">Linux Configuration</span>
-      <p class="service-desc">Installation and configuration of Linux distributions, driver tuning, service management and system optimization.</p>
-      <span class="service-arrow">→</span>
-    </div>
-    <div class="service-details" data-accordion-body>
-      <ul>
-              <li>Distributions: Ubuntu, Zorin OS, ZimaOS</li>
-              <li>Service management: systemd, journalctl</li>
-              <li>Drivers: NVIDIA legacy, Intel i915, DKMS</li>
-              <li>Optimization: throttling, power management</li>
-              <li>Environments: GNOME, boot and GRUB configuration</li>
-      </ul>
-    </div>
-    <div class="service-item" data-accordion>
-      <span class="service-num">03</span>
-      <span class="service-name">Basic Infrastructure</span>
-      <p class="service-desc">Personal server setup, virtual machine configuration and network file sharing (e.g. Samba).</p>
-      <span class="service-arrow">→</span>
-    </div>
-    <div class="service-details" data-accordion-body>
-      <ul>
-              <li>Servers: ZimaOS, Docker, Docker Compose</li>
-              <li>Networking: Tailscale VPN, SSH (ed25519), fail2ban</li>
-              <li>File sharing: Samba, SCP, Rsync</li>
-              <li>Monitoring: Uptime Kuma, AdGuard Home</li>
-              <li>Backup: Restic + SFTP with automatic retention</li>
-      </ul>
-    </div>
-    <div class="service-item" data-accordion>
-      <span class="service-num">04</span>
-      <span class="service-name">Projects &amp; Prototyping</span>
-      <p class="service-desc">Software prototype development for study or demonstration, personal projects for programming and logic practice.</p>
-      <span class="service-arrow">→</span>
-    </div>
-    <div class="service-details" data-accordion-body>
-      <ul>
-              <li>Rapid prototyping in C and terminal</li>
-              <li>Textual interface design with ANSI</li>
-              <li>Documentation and requirements engineering</li>
-              <li>Version control with Git</li>
-              <li>Manual testing and logic validation</li>
-      </ul>
-    </div>
-  </div>
-</section>
-<div class="gradient-bar"></div>
-<section id="projects">
-  <p class="section-label reveal">03 — Projects</p>
-  <h2 class="section-title reveal">Featured<br>work</h2>
-  <div class="project-card reveal ">
-    <div class="project-visual">
-      <div class="terminal-wrap">
-          <span class="t-cyan">B . . . . . . . . . . . . . . . . . . .</span>
-          <span class="t-white">. . . . . . . . . . . . . . . . . X . .</span>
-          <span class="t-white">. . X . . . . . . . . . . . . . . . . .</span>
-          <span class="t-white">. . . . . . . . . . . . . . . . . . . .</span>
-          <span class="t-gold">. . . . . . . . . . . . . . . . . C . .</span>
-          <span class="t-white">. . . . . . . . . . . . . . X . . . . .</span>
-          <span class="t-grey-dim">Remaining time: 94s</span>
-          <span class="t-grey-dim">Fragments: 1/2     </span>
-      </div>
-    </div>
-    <div class="project-info">
-      <div>
-        <p class="project-label">Project 01 · C Game</p>
-        <h3 class="project-name">Point Rush</h3>
-        <p class="project-desc">Terminal game developed in C, featuring a movement system, item collection, real-time scoring, persistent ranking and a visual interface with ANSI escape codes.</p>
-        <div class="project-tech">
-          <span class="tech-chip">C</span>
-          <span class="tech-chip">ANSI Escape</span>
-          <span class="tech-chip">File I/O</span>
-          <span class="tech-chip">Terminal UI</span>
-          <span class="tech-chip">Ranking System</span>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-mobile" id="nav-mobile">
+        <a href="#about" class="nav-mobile-link">About</a>
+        <a href="#skills" class="nav-mobile-link">Skills</a>
+        <a href="#services" class="nav-mobile-link">Services</a>
+        <a href="#projects" class="nav-mobile-link">Projects</a>
+        <a href="#contact" class="nav-mobile-link">Contact</a>
+        <div class="lang-switcher lang-switcher-mobile">
+          <a href="../" class="lang-btn" data-lang="pt">PT</a>
+          <span class="lang-sep">·</span>
+          <a href="./" class="lang-btn active" data-lang="en">EN</a>
         </div>
       </div>
-      <div class="project-btns">
-          <a href="https://onlinegdb.com/SGRejion7L" target="_blank" rel="noopener noreferrer" class="btn-primary">▶ Play now</a>
-          <a href="https://github.com/Wilson-Cecchi/Point-Rush" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub →</a>
+    </nav>
+    <section id="hero">
+      <div class="hero-bg-text" aria-hidden="true">WILSON</div>
+      <p class="hero-tag">Developer &amp; Sysadmin · TADS 2026</p>
+      <h1 class="hero-name">
+        Wilson<br />
+        <span class="accent">Klein</span><br />
+        Cecchi
+      </h1>
+      <p class="hero-sub">
+        Systems Analysis and Development student. Passionate about C
+        programming, Linux systems and infrastructure. Building solid solutions,
+        one line of code at a time.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#projects" class="btn-primary">Learn more →</a>
+        <span class="hero-scroll">Scroll to explore</span>
       </div>
-    </div>
-  </div>
-  <div class="project-card reveal reverse">
-    <div class="project-visual">
-      <div class="terminal-wrap">
-          <span class="t-cyan">$ sudo python3 redevis.py</span>
-          <span class="t-grey-dim">Scanning 192.168.100.0/24 ...</span>
-          <span class="t-gold">[+] 192.168.100.1    router   ASUS</span>
-          <span class="t-white">[+] 192.168.100.5    server   HP  </span>
-          <span class="t-white">[+] 192.168.100.105  PC       Intel</span>
-          <span class="t-white">[+] 192.168.100.250  TV       Samsung</span>
-          <span class="t-grey-dim">Devices found: 8</span>
-          <span class="t-cyan">Report → reports/report.html</span>
-      </div>
-    </div>
-    <div class="project-info">
-      <div>
-        <p class="project-label">Project 02 · Network Scanner</p>
-        <h3 class="project-name">Redevis</h3>
-        <p class="project-desc">Local network inventory tool built in Python. Detects active devices and identifies vendor, hostname and device type. Generates a dark-themed HTML report with search, sorting and CSV export.</p>
-        <div class="project-tech">
-          <span class="tech-chip">Python</span>
-          <span class="tech-chip">nmap</span>
-          <span class="tech-chip">Scapy</span>
-          <span class="tech-chip">Zeroconf</span>
-          <span class="tech-chip">HTML Report</span>
+      <div class="hero-year">© 2026</div>
+    </section>
+    <div class="gradient-bar"></div>
+    <section id="about">
+      <p class="section-label">00 — About</p>
+      <div class="about-grid reveal">
+        <div class="about-photo-wrap">
+          <div class="about-photo">
+            <img
+              src="../assets/img/eutalvez.png"
+              alt="Foto de Wilson Klein Cecchi"
+            />
+          </div>
+          <div class="about-photo-tag">ADS · 2026</div>
+        </div>
+        <div class="about-text">
+          <h2 class="section-title">Who<br />I am?</h2>
+          <p>
+            I am <strong>Wilson Klein Cecchi</strong>, a Systems Analysis and
+            Development student with a strong interest in technology,
+            programming and systems engineering. From an early age I have shown
+            curiosity for understanding how things work, especially in
+            computing, networking and software development.
+          </p>
+          <p>
+            My main focus is to evolve technically and build a solid career in
+            technology. I have hands-on experience developing personal projects,
+            such as games in C and experiments with systems, servers and Linux
+            environments.
+          </p>
+          <p>
+            What motivates me most is the
+            <strong>challenge of solving complex problems</strong> and
+            constantly improving my skills. I always seek to deepen my
+            knowledge, test new tools and explore different areas of technology.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-number">C</div>
+              <div class="stat-label">Main Language</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">Linux</div>
+              <div class="stat-label">Work Environment</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">2026</div>
+              <div class="stat-label">ADS Graduation</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="project-btns">
-          <a href="https://github.com/Wilson-Cecchi/redevis" target="_blank" rel="noopener noreferrer" class="btn-primary">View on GitHub →</a>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="gradient-bar"></div>
-<section id="education">
-  <p class="section-label reveal">04 — Education</p>
-  <h2 class="section-title reveal">Education</h2>
-  <div class="edu-card reveal">
-    <div>
-      <p class="edu-year">2025 — 2026</p>
-      <span class="edu-status">In progress</span>
-    </div>
-    <div>
-      <h3 class="edu-degree">Systems Analysis and Development</h3>
-      <p class="edu-institution">Technology Degree · Expected December 2026</p>
-      <p class="edu-desc">Technology course focused on systems development, programming logic, requirements engineering, networking and infrastructure.</p>
-    </div>
-  </div>
-</section>
-<div class="gradient-bar"></div>
-<section id="contact">
-  <p class="section-label reveal">05 — Contact</p>
-  <div class="contact-inner">
-    <div class="reveal">
-      <h2 class="contact-headline">
-        Let's<br>
-        <span>talk</span>
-      </h2>
-      <p class="contact-note">Open to projects, collaborations and opportunities. If you have something interesting in mind, get in touch.</p>
-    </div>
-    <div class="contact-links reveal reveal-delay-1">
-      <a href="https://github.com/Wilson-Cecchi" class="contact-link-item" target="_blank" rel="noopener noreferrer">
-        <div class="contact-link-left">
-          <span class="contact-link-platform">GitHub</span>
-          <span class="contact-link-value">Wilson-Cecchi</span>
+    </section>
+    <div class="gradient-bar"></div>
+    <section id="skills">
+      <p class="section-label reveal">01 — Skills</p>
+      <h2 class="section-title reveal">Stack &amp;<br />Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-category reveal reveal-delay-1">
+          <p class="skill-cat-label">Languages</p>
+          <h3 class="skill-cat-title">Programming</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">Logic</span>
+            <span class="skill-tag">Pseudocode</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">AngularJS</span>
+            <span class="skill-tag">ANSI / Terminal</span>
+          </div>
         </div>
-        <span class="contact-link-arrow">↗</span>
-      </a>
-      <div class="contact-link-item is-pending">
-        <div class="contact-link-left">
-          <span class="contact-link-platform">LinkedIn</span>
-          <span class="contact-link-value contact-pending">Em breve</span>
+        <div class="skill-category reveal reveal-delay-2">
+          <p class="skill-cat-label">Tools</p>
+          <h3 class="skill-cat-title">Dev &amp; Design</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Windsurf</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">OnlineGDB</span>
+            <span class="skill-tag">Uizard</span>
+            <span class="skill-tag">XAMPP</span>
+          </div>
         </div>
-        <span class="contact-link-arrow" style="opacity:.3;">↗</span>
-      </div>
-      <a href="mailto:wilson.k.cecchi@gmail.com" class="contact-link-item">
-        <div class="contact-link-left">
-          <span class="contact-link-platform">Email</span>
-          <span class="contact-link-value">wilson.k.cecchi@gmail.com</span>
+        <div class="skill-category reveal reveal-delay-1">
+          <p class="skill-cat-label">Systems</p>
+          <h3 class="skill-cat-title">Linux &amp; Infra</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Advanced Linux</span>
+            <span class="skill-tag">ZimaOS</span>
+            <span class="skill-tag">Ubuntu</span>
+            <span class="skill-tag">Servers</span>
+            <span class="skill-tag">Samba</span>
+            <span class="skill-tag">Drivers</span>
+            <span class="skill-tag">Docker</span>
+          </div>
         </div>
-        <span class="contact-link-arrow">↗</span>
-      </a>
-      <a href="https://instagram.com/Um_tal_de_wilson_ai" class="contact-link-item" target="_blank" rel="noopener noreferrer">
-        <div class="contact-link-left">
-          <span class="contact-link-platform">Instagram</span>
-          <span class="contact-link-value">@Um_tal_de_wilson_ai</span>
+        <div class="skill-category reveal reveal-delay-2">
+          <p class="skill-cat-label">Knowledge</p>
+          <h3 class="skill-cat-title">Fundamentals</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Requirements Engineering</span>
+            <span class="skill-tag">Networking</span>
+            <span class="skill-tag">Protocols</span>
+            <span class="skill-tag">Tailscale / VPN</span>
+            <span class="skill-tag">Security</span>
+            <span class="skill-tag">SSH</span>
+          </div>
         </div>
-        <span class="contact-link-arrow">↗</span>
-      </a>
-    </div>
-
-    <form class="contact-form reveal reveal-delay-2" action="https://formspree.io/f/xnjgdnwy" method="POST">
-      <div class="form-group">
-        <input type="text" name="name" placeholder="Seu nome" required>
       </div>
-      <div class="form-group">
-        <input type="email" name="email" placeholder="Seu email" required>
+    </section>
+    <div class="gradient-bar"></div>
+    <section id="services">
+      <p class="section-label reveal">02 — Services</p>
+      <h2 class="section-title reveal">What<br />I offer</h2>
+      <div class="services-list reveal">
+        <div class="service-item" data-accordion>
+          <span class="service-num">01</span>
+          <span class="service-name">Software Development</span>
+          <p class="service-desc">
+            C programming focused on terminal applications, game logic, scoring
+            systems, file manipulation and interactive menus.
+          </p>
+          <span class="service-arrow">→</span>
+        </div>
+        <div class="service-details" data-accordion-body>
+          <ul>
+            <li>Main language: C (C99/C11)</li>
+            <li>Data structures: arrays, structs, pointers</li>
+            <li>File handling: read/write with FILE*</li>
+            <li>Terminal interface: ANSI escape codes, interactive menus</li>
+            <li>Game logic: movement, collision, ranking, timer</li>
+          </ul>
+        </div>
+        <div class="service-item" data-accordion>
+          <span class="service-num">02</span>
+          <span class="service-name">Linux Configuration</span>
+          <p class="service-desc">
+            Installation and configuration of Linux distributions, driver
+            tuning, service management and system optimization.
+          </p>
+          <span class="service-arrow">→</span>
+        </div>
+        <div class="service-details" data-accordion-body>
+          <ul>
+            <li>Distributions: Ubuntu, Zorin OS, ZimaOS</li>
+            <li>Service management: systemd, journalctl</li>
+            <li>Drivers: NVIDIA legacy, Intel i915, DKMS</li>
+            <li>Optimization: throttling, power management</li>
+            <li>Environments: GNOME, boot and GRUB configuration</li>
+          </ul>
+        </div>
+        <div class="service-item" data-accordion>
+          <span class="service-num">03</span>
+          <span class="service-name">Basic Infrastructure</span>
+          <p class="service-desc">
+            Personal server setup, virtual machine configuration and network
+            file sharing (e.g. Samba).
+          </p>
+          <span class="service-arrow">→</span>
+        </div>
+        <div class="service-details" data-accordion-body>
+          <ul>
+            <li>Servers: ZimaOS, Docker, Docker Compose</li>
+            <li>Networking: Tailscale VPN, SSH (ed25519), fail2ban</li>
+            <li>File sharing: Samba, SCP, Rsync</li>
+            <li>Monitoring: Uptime Kuma, AdGuard Home</li>
+            <li>Backup: Restic + SFTP with automatic retention</li>
+          </ul>
+        </div>
+        <div class="service-item" data-accordion>
+          <span class="service-num">04</span>
+          <span class="service-name">Projects &amp; Prototyping</span>
+          <p class="service-desc">
+            Software prototype development for study or demonstration, personal
+            projects for programming and logic practice.
+          </p>
+          <span class="service-arrow">→</span>
+        </div>
+        <div class="service-details" data-accordion-body>
+          <ul>
+            <li>Rapid prototyping in C and terminal</li>
+            <li>Textual interface design with ANSI</li>
+            <li>Documentation and requirements engineering</li>
+            <li>Version control with Git</li>
+            <li>Manual testing and logic validation</li>
+          </ul>
+        </div>
       </div>
-      <div class="form-group">
-        <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+    </section>
+    <div class="gradient-bar"></div>
+    <section id="projects">
+      <p class="section-label reveal">03 — Projects</p>
+      <h2 class="section-title reveal">Featured<br />work</h2>
+      <div class="project-card reveal">
+        <div class="project-visual">
+          <div class="terminal-wrap">
+            <span class="t-cyan">B . . . . . . . . . . . . . . . . . . .</span>
+            <span class="t-white">. . . . . . . . . . . . . . . . . X . .</span>
+            <span class="t-white">. . X . . . . . . . . . . . . . . . . .</span>
+            <span class="t-white">. . . . . . . . . . . . . . . . . . . .</span>
+            <span class="t-gold">. . . . . . . . . . . . . . . . . C . .</span>
+            <span class="t-white">. . . . . . . . . . . . . . X . . . . .</span>
+            <span class="t-grey-dim">Remaining time: 94s</span>
+            <span class="t-grey-dim">Fragments: 1/2 </span>
+          </div>
+        </div>
+        <div class="project-info">
+          <div>
+            <p class="project-label">Project 01 · C Game</p>
+            <h3 class="project-name">Point Rush</h3>
+            <p class="project-desc">
+              Terminal game developed in C, featuring a movement system, item
+              collection, real-time scoring, persistent ranking and a visual
+              interface with ANSI escape codes.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">C</span>
+              <span class="tech-chip">ANSI Escape</span>
+              <span class="tech-chip">File I/O</span>
+              <span class="tech-chip">Terminal UI</span>
+              <span class="tech-chip">Ranking System</span>
+            </div>
+          </div>
+          <div class="project-btns">
+            <a
+              href="https://onlinegdb.com/SGRejion7L"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+              >▶ Play now</a
+            >
+            <a
+              href="https://github.com/Wilson-Cecchi/Point-Rush"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary"
+              >GitHub →</a
+            >
+          </div>
+        </div>
       </div>
-      <button type="submit" class="form-btn">Enviar mensagem →</button>
-    </form>
-  </div>
-</section>
-<footer>
-  <p class="footer-copy">
-    © 2026
-    <span>Wilson Klein Cecchi</span>
-    All rights reserved
-  </p>
-  <a href="#hero" class="footer-back">↑ Back to top</a>
-</footer>
-<script src="../assets/js/main.js"></script>
-<script src="../assets/js/game.js"></script>
-</body>
+      <div class="project-card reveal reverse">
+        <div class="project-visual">
+          <div class="terminal-wrap">
+            <span class="t-cyan">$ sudo python3 redevis.py</span>
+            <span class="t-grey-dim">Scanning 192.168.100.0/24 ...</span>
+            <span class="t-gold">[+] 192.168.100.1 router ASUS</span>
+            <span class="t-white">[+] 192.168.100.5 server HP </span>
+            <span class="t-white">[+] 192.168.100.105 PC Intel</span>
+            <span class="t-white">[+] 192.168.100.250 TV Samsung</span>
+            <span class="t-grey-dim">Devices found: 8</span>
+            <span class="t-cyan">Report → reports/report.html</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <div>
+            <p class="project-label">Project 02 · Network Scanner</p>
+            <h3 class="project-name">Redevis</h3>
+            <p class="project-desc">
+              Local network inventory tool built in Python. Detects active
+              devices and identifies vendor, hostname and device type. Generates
+              a dark-themed HTML report with search, sorting and CSV export.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">nmap</span>
+              <span class="tech-chip">Scapy</span>
+              <span class="tech-chip">Zeroconf</span>
+              <span class="tech-chip">HTML Report</span>
+            </div>
+          </div>
+          <div class="project-btns">
+            <a
+              href="https://github.com/Wilson-Cecchi/redevis"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+              >View on GitHub →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="gradient-bar"></div>
+    <section id="education">
+      <p class="section-label reveal">04 — Education</p>
+      <h2 class="section-title reveal">Education</h2>
+      <div class="edu-card reveal">
+        <div>
+          <p class="edu-year">2025 — 2026</p>
+          <span class="edu-status">In progress</span>
+        </div>
+        <div>
+          <h3 class="edu-degree">Systems Analysis and Development</h3>
+          <p class="edu-institution">
+            Technology Degree · Expected December 2026
+          </p>
+          <p class="edu-desc">
+            Technology course focused on systems development, programming logic,
+            requirements engineering, networking and infrastructure.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="gradient-bar"></div>
+    <section id="contact">
+      <p class="section-label reveal">05 — Contact</p>
+      <div class="contact-inner">
+        <div class="reveal">
+          <h2 class="contact-headline">
+            Let's<br />
+            <span>talk</span>
+          </h2>
+          <p class="contact-note">
+            Open to projects, collaborations and opportunities. If you have
+            something interesting in mind, get in touch.
+          </p>
+        </div>
+        <div class="contact-links reveal reveal-delay-1">
+          <a
+            href="https://github.com/Wilson-Cecchi"
+            class="contact-link-item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="contact-link-left">
+              <span class="contact-link-platform">GitHub</span>
+              <span class="contact-link-value">Wilson-Cecchi</span>
+            </div>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <div class="contact-link-item is-pending">
+            <div class="contact-link-left">
+              <span class="contact-link-platform">LinkedIn</span>
+              <span class="contact-link-value contact-pending">Em breve</span>
+            </div>
+            <span class="contact-link-arrow" style="opacity: 0.3">↗</span>
+          </div>
+          <a href="mailto:wilson.k.cecchi@gmail.com" class="contact-link-item">
+            <div class="contact-link-left">
+              <span class="contact-link-platform">Email</span>
+              <span class="contact-link-value">wilson.k.cecchi@gmail.com</span>
+            </div>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a
+            href="https://instagram.com/Um_tal_de_wilson_ai"
+            class="contact-link-item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="contact-link-left">
+              <span class="contact-link-platform">Instagram</span>
+              <span class="contact-link-value">@Um_tal_de_wilson_ai</span>
+            </div>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <form
+            class="contact-form reveal reveal-delay-2"
+            action="https://formspree.io/f/xnjgdnwy"
+            method="POST"
+          >
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Seu email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                placeholder="Sua mensagem"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="form-btn">Enviar mensagem →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p class="footer-copy">
+        © 2026
+        <span>Wilson Klein Cecchi</span>
+        All rights reserved
+      </p>
+      <a href="#hero" class="footer-back">↑ Back to top</a>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/game.js"></script>
+  </body>
 </html>
