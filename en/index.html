@@ -101,7 +101,7 @@
           <div class="about-photo">
             <img
               src="../assets/img/eutalvez.png"
-              alt="Foto de Wilson Klein Cecchi"
+              alt="Photo of Wilson Klein Cecchi"
             />
           </div>
           <div class="about-photo-tag">ADS · 2026</div>
@@ -421,58 +421,81 @@
             </div>
             <span class="contact-link-arrow">↗</span>
           </a>
-          <div class="contact-link-item is-pending">
+          <a 
+            href="https://www.linkedin.com/in/w-kc-0090983a1/"
+            class="contact-link-item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div class="contact-link-left">
               <span class="contact-link-platform">LinkedIn</span>
-              <span class="contact-link-value contact-pending">Coming soon</span>
+              <span class="contact-link-value">Wilson Klein Cecchi</span>
             </div>
-            <span class="contact-link-arrow" style="opacity: 0.3">↗</span>
-          </div>
-          <a href="mailto:wilson.k.cecchi@gmail.com" class="contact-link-item">
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a 
+            href="mailto:wilson.k.cecchi@gmail.com" 
+            class="contact-link-item"
+          >
             <div class="contact-link-left">
               <span class="contact-link-platform">Email</span>
               <span class="contact-link-value">wilson.k.cecchi@gmail.com</span>
             </div>
             <span class="contact-link-arrow">↗</span>
           </a>
-          <a
-            href="https://instagram.com/Um_tal_de_wilson_ai"
-            class="contact-link-item"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="contact-link-left">
-              <span class="contact-link-platform">Instagram</span>
-              <span class="contact-link-value">@Um_tal_de_wilson_ai</span>
-            </div>
-            <span class="contact-link-arrow">↗</span>
-          </a>
-          <form
-            class="contact-form reveal reveal-delay-2"
-            action="https://formspree.io/f/xnjgdnwy"
-            method="POST"
-          >
+          <form class="contact-form reveal reveal-delay-2" id="contact-form">
             <div class="form-group">
               <input type="text" name="name" placeholder="Your name" required />
             </div>
             <div class="form-group">
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email"
-                required
-              />
+              <input type="email" name="email" placeholder="Your email" required />
             </div>
             <div class="form-group">
-              <textarea
-                name="message"
-                placeholder="Your message"
-                rows="5"
-                required
-              ></textarea>
+              <textarea name="message" placeholder="Your message" rows="5" required></textarea>
             </div>
-            <button type="submit" class="form-btn">Send message →</button>
+            <button type="submit" class="form-btn" id="form-btn">Send message →</button>
+            <p id="form-status" style="display:none; margin-top: 1rem;"></p>
           </form>
+
+          <script>
+            const form = document.getElementById("contact-form");
+            const status = document.getElementById("form-status");
+            const btn = document.getElementById("form-btn");
+
+            form.addEventListener("submit", async (e) => {
+              e.preventDefault();
+
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+              if (!emailRegex.test(form.email.value)) {
+                status.textContent = "Please enter a valid email address.";
+                status.style.color = "#f55";
+                status.style.display = "block";
+                return;
+              }
+
+              btn.disabled = true;
+              btn.textContent = "Sending...";
+
+              const res = await fetch("https://formspree.io/f/xnjgdnwy", {
+                method: "POST",
+                body: new FormData(form),
+                headers: { Accept: "application/json" }
+              });
+
+              if (res.ok) {
+                status.textContent = "Message sent! I'll get back to you soon.";
+                status.style.color = "var(--color-accent, #0f0)";
+                form.reset();
+              } else {
+                status.textContent = "Something went wrong. Try emailing me directly.";
+                status.style.color = "#f55";
+              }
+
+              status.style.display = "block";
+              btn.disabled = false;
+              btn.textContent = "Send message →";
+            });
+          </script>
         </div>
       </div>
     </section>
