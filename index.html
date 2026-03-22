@@ -460,46 +460,6 @@
             <button type="submit" class="form-btn" id="form-btn">Enviar mensagem →</button>
             <p id="form-status" style="display:none; margin-top: 1rem;"></p>
           </form>
-
-          <script>
-            const form = document.getElementById("contact-form");
-            const status = document.getElementById("form-status");
-            const btn = document.getElementById("form-btn");
-
-            form.addEventListener("submit", async (e) => {
-              e.preventDefault();
-
-              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-              if (!emailRegex.test(form.email.value)) {
-                status.textContent = "Digite um email válido.";
-                status.style.color = "#f55";
-                status.style.display = "block";
-                return;
-              }
-
-              btn.disabled = true;
-              btn.textContent = "Enviando...";
-
-              const res = await fetch("https://formspree.io/f/xnjgdnwy", {
-                method: "POST",
-                body: new FormData(form),
-                headers: { Accept: "application/json" }
-              });
-
-              if (res.ok) {
-                status.textContent = "Mensagem enviada! Entrarei em contato em breve.";
-                status.style.color = "var(--color-accent, #0f0)";
-                form.reset();
-              } else {
-                status.textContent = "Algo deu errado. Tente me enviar um email diretamente.";
-                status.style.color = "#f55";
-              }
-
-              status.style.display = "block";
-              btn.disabled = false;
-              btn.textContent = "Enviar mensagem →";
-            });
-          </script>
         </div>
       </div>
     </section>

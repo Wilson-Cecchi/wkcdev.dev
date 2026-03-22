@@ -456,46 +456,6 @@
             <button type="submit" class="form-btn" id="form-btn">Send message →</button>
             <p id="form-status" style="display:none; margin-top: 1rem;"></p>
           </form>
-
-          <script>
-            const form = document.getElementById("contact-form");
-            const status = document.getElementById("form-status");
-            const btn = document.getElementById("form-btn");
-
-            form.addEventListener("submit", async (e) => {
-              e.preventDefault();
-
-              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-              if (!emailRegex.test(form.email.value)) {
-                status.textContent = "Please enter a valid email address.";
-                status.style.color = "#f55";
-                status.style.display = "block";
-                return;
-              }
-
-              btn.disabled = true;
-              btn.textContent = "Sending...";
-
-              const res = await fetch("https://formspree.io/f/xnjgdnwy", {
-                method: "POST",
-                body: new FormData(form),
-                headers: { Accept: "application/json" }
-              });
-
-              if (res.ok) {
-                status.textContent = "Message sent! I'll get back to you soon.";
-                status.style.color = "var(--color-accent, #0f0)";
-                form.reset();
-              } else {
-                status.textContent = "Something went wrong. Try emailing me directly.";
-                status.style.color = "#f55";
-              }
-
-              status.style.display = "block";
-              btn.disabled = false;
-              btn.textContent = "Send message →";
-            });
-          </script>
         </div>
       </div>
     </section>
