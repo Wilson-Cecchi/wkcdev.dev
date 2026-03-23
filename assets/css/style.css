@@ -722,6 +722,8 @@ footer {
   .project-card   { grid-template-columns: 1fr; }
   .project-visual { aspect-ratio: 16/6; }
   .terminal-wrap  { font-size: 9px; }
+  .project-card.reverse .project-visual { order: unset; }
+  .project-card.reverse .project-info   { order: unset; }
 }
 
 /* Mobile (até 900px) */
